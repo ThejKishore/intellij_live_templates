@@ -1,0 +1,162 @@
+<templateSet group="user">
+  <template name="loadProp" value="private static java.util.Properties properties = new java.util.Properties();&#10;    static{&#10;        try {&#10;            properties.load(com.kish.learn.HelloWorld.class.getResourceAsStream(&quot;/META-INF/resources/something.properties&quot;));&#10;        } catch (java.io.IOException e) {&#10;            e.printStackTrace();&#10;        }&#10;    }" description="loading properties from the classpath" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="cmdlr" value="@org.springframework.context.annotation.Bean&#10;&#9;public org.springframework.boot.CommandLineRunner commandLineRunner(org.springframework.context.ApplicationContext appContext) {&#10;&#9;&#9;return args -&gt; {&#10;&#9;&#9;&#9;java.lang.String[] beans = appContext.getBeanDefinitionNames();&#10;&#9;&#9;&#9;java.util.Arrays.stream(beans).sorted().forEach(java.lang.System.out::println);&#10;&#9;&#9;};&#10;&#9;}" description="Command line Runner bean definition" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="kafkacloudd" value="compile 'org.springframework.cloud:spring-cloud-stream'&#10;compile 'org.springframework.cloud:spring-cloud-starter-stream-kafka'" description="Kafka cloud stream dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="lombokd" value="compileOnly 'org.projectlombok:lombok'" description="Adding boot lombok dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="mysqld" value="compile 'mysql:mysql-connector-java:6.0.5'" description="Adding mysql connector as gradle dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="aopd" value="//boot-aop&#10;compile 'org.springframework.boot:spring-boot-starter-aop'" description="boot aop dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="cached" value="//boot-cache&#10;compile 'org.springframework.boot:spring-boot-starter-cache'" description="boot cache starter dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="configserverd" value="//boot-config-server&#10;compile 'org.springframework.cloud:spring-cloud-server:$configServerVersion'" description="boot config server dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="eurclid" value="//boot-eureka-client&#10;compile 'org.springframework.cloud:spring-cloud-starter-eureka'" description="Eureaka client dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="eureakaserverd" value="//boot-erureka-server&#10;compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'" description="boot eureaka server dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="h2d" value="//h2 database&#10;runtime 'com.h2database:h2'" description="h2 inmemory database dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="jdbc" value="//boot-jdbc&#10;    compile 'org.springframework.boot:spring-boot-starter-jdbc'" description="Spring Boot JDBC Dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="jpad" value="//boot-jpa&#10;compile 'org.springframework.boot:spring-boot-starter-data-jpa'" description="boot jpa dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="marklogicd" value="//marklogic&#10;compile 'com.marklogic-client-api:4.+'" description="marklogic dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="secd" value="//boot-security&#10;    compile 'org.springframework.boot:spring-boot-starter-security'" description="boot security dependency." toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="webd" value="//boot-web-rest&#10;compile 'org.springframework.boot:spring-boot-starter-web'" description="spring boot web dependency" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="bootinit" value="buildscript {&#10;&#9;ext {&#10;&#9;&#9;springBootVersion = '1.5.10.RELEASE'&#10;&#9;}&#10;&#9;repositories {&#10;&#9;&#9;mavenCentral()&#10;&#9;}&#10;&#9;dependencies {&#10;&#9;&#9;classpath(&quot;org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}&quot;)&#10;&#9;}&#10;}&#10;&#10;apply plugin: 'java'&#10;apply plugin: 'idea'&#10;apply plugin: 'eclipse'&#10;apply plugin: 'org.springframework.boot'&#10;&#10;group = '${group_id}'&#10;version = '0.0.1-SNAPSHOT'&#10;sourceCompatibility = 1.8&#10;&#10;repositories {&#10;&#9;mavenCentral()&#10;}&#10;dependencies{&#10;    ${CURSOR}${END}&#10;}" description="boot build .gradle init" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_DECLARATION" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="cloudinit" value="buildscript {&#10;&#9;ext {&#10;&#9;&#9;springBootVersion = '1.5.10.RELEASE'&#10;&#9;}&#10;&#9;repositories {&#10;&#9;&#9;mavenCentral()&#10;&#9;}&#10;&#9;dependencies {&#10;&#9;&#9;classpath(&quot;org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}&quot;)&#10;&#9;}&#10;}&#10;&#10;apply plugin: 'java'&#10;apply plugin: 'idea'&#10;apply plugin: 'eclipse'&#10;apply plugin: 'org.springframework.boot'&#10;&#10;group = '${group_id}'&#10;version = '0.0.1-SNAPSHOT'&#10;sourceCompatibility = 1.8&#10;&#10;repositories {&#10;&#9;mavenCentral()&#10;}&#10;&#10;&#10;ext {&#10;&#9;springCloudVersion = 'Edgware.SR1'&#10;}&#10;&#10;&#10;dependencyManagement {&#10;&#9;imports {&#10;&#9;&#9;mavenBom &quot;org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}&quot;&#10;&#9;}&#10;}&#10;&#10;dependencies{&#10;    ${CURSOR}${END}&#10;}" description="spring boot cloud build init" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_DECLARATION" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="h2datasourceconfig" value="spring.datasource.url=jdbc:h2:~/test&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=" description="h2 data source config" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="flywayprop" value="flyway.enabled=true&#10;flyway.locations=classpath:db/migration&#10;flyway.sql-migration-prefix=V&#10;flyway.check-location=true&#10;flyway.url=jdbc:h2:~/test&#10;flyway.user=sa&#10;flyway.sql-migration-suffix=.sql&#10;flyway.validate-on-migrate=true" description="setting flyway properties in boot application" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+</templateSet>
